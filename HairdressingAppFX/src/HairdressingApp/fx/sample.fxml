@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HairdressingApp.fx.Controller">
+   <left>
+      <ListView fx:id="listAppointments" prefHeight="356.0" prefWidth="218.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane fx:id="appointmentsPanel" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Registered User:" />
+            <Label fx:id="registeredUser" layoutX="108.0" layoutY="14.0" text="???" textFill="#3391f5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="39.0" text="Search username Client" />
+            <TextField fx:id="searchUsername" layoutX="14.0" layoutY="56.0" prefHeight="25.0" prefWidth="104.0" />
+            <Label layoutX="14.0" layoutY="91.0" text="Customer's Full Name" />
+            <Label fx:id="fullName" layoutX="14.0" layoutY="108.0" textFill="RED" />
+            <Button fx:id="btnCheckUsername" layoutX="124.0" layoutY="56.0" mnemonicParsing="false" onAction="#checkUsername" text="Check" />
+            <ComboBox fx:id="appointmentDate" layoutX="15.0" layoutY="195.0" prefWidth="150.0" />
+            <Label layoutX="15.0" layoutY="178.0" text="Appointment Date " />
+            <Label layoutX="16.0" layoutY="226.0" text="Appointment Time" />
+            <Label layoutX="16.0" layoutY="125.0" text="Service" />
+            <ComboBox fx:id="appointmentService" layoutX="15.0" layoutY="142.0" prefWidth="150.0" />
+            <ComboBox fx:id="appointmentTime" layoutX="15.0" layoutY="243.0" prefWidth="150.0" />
+         </children></AnchorPane>
+   </right>
+   <center>
+      <Pane prefHeight="400.0" prefWidth="233.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="112.0" prefHeight="26.0" prefWidth="67.0" text="Username:" />
+            <TextField fx:id="txtUsername" layoutX="81.0" layoutY="113.0" prefHeight="25.0" prefWidth="99.0" />
+            <Label layoutX="14.0" layoutY="187.0" prefHeight="26.0" prefWidth="67.0" text="Password:" />
+            <TextField fx:id="txtPassword" layoutX="81.0" layoutY="188.0" prefHeight="25.0" prefWidth="99.0" />
+            <Button fx:id="btnLogin" layoutX="68.0" layoutY="249.0" mnemonicParsing="false" onAction="#checkLogin" text="Login" />
+            <Label layoutX="32.0" layoutY="24.0" style="-fx-background-color: F4A944;" text="Hairdressing App">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <AnchorPane fx:id="appointmentsProcess" prefHeight="44.0" prefWidth="445.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="deleteAppointment" layoutX="377.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDeleteAppointment" text="Delete Appointment" />
+            <Button fx:id="makeAppointment" layoutX="232.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnMakeAppointment" text="Make Appointment" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
